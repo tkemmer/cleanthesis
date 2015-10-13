@@ -74,8 +74,8 @@
 
 % OPTION colortheme
 % --> values = bluemagenta|bluegreen
-\define@choicekey*[ct]{cthesis}{colortheme}[\val\themenr]{bluemagenta,bluegreen}[bluemagenta]{\def\cthesis@colortheme{\themenr}}
-\setkeys[ct]{cthesis}{colortheme=bluemagenta}
+\define@choicekey*[ct]{cthesis}{colortheme}[\val\themenr]{bluemagenta,bluegreen,jgured}[jgured]{\def\cthesis@colortheme{\themenr}}
+\setkeys[ct]{cthesis}{colortheme=jgured}
 
 % OPTION bibsys
 % --> values = biber|bibtex
@@ -186,6 +186,11 @@
 	\cthesissetcolor{cmyk}{.61, .47, .03, 0}{.48, .05, .91, 0}%
 }
 
+% sets the JGU red color theme (red/gray)
+\def\cthesissetcolorjgured{%
+	\cthesissetcolor{cmyk}{0, 1, .8, .2}{0, 0, 0, .7}%
+}
+
 % defines general colors
 \definecolor{ctcolorblack}{gray}{0}
 \definecolor{ctcolorgray}{gray}{.5}
@@ -198,6 +203,9 @@
 \or
 	% case 1 (colortheme == bluegreen)
 	\cthesissetcolorbluegreen
+\or
+	% case 2 (colortheme == jgured)
+	\cthesissetcolorjgured
 \else
 	% all other cases
 	\cthesissetcolorbluemagenta
